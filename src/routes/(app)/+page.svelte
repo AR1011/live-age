@@ -18,7 +18,7 @@
 		if (!dateOfBirth) return null;
 		const dob = new Date(dateOfBirth);
 		const diff_ms = Date.now() - dob.getTime();
-		let t = (diff_ms / 31557600000).toFixed(20);
+		let t = (diff_ms / 31557600000).toFixed(40);
 
 		let s = t.split('.');
 		year = s[0];
@@ -28,7 +28,7 @@
 	function startLoop() {
 		setInterval(() => {
 			calculateAgeInYearsMicrosecond(dob);
-		}, 10);
+		}, 1 / 300);
 	}
 
 	onMount(() => {
@@ -78,7 +78,7 @@
 		margin-top: 0;
 	}
 	.age sup {
-		font-size: 32px;
+		font-size: 28px;
 		margin-top: -20px;
 		margin-bottom: 2rem;
 	}

@@ -8,5 +8,9 @@
 
 ```bash
 npm i
+```
+
+<br>
+```bash
 npm run dev
 ```
